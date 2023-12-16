@@ -26,12 +26,14 @@ public class FindIntersection {
         
         int[] result = new int[size];
         
+        System.out.println("The elements in both arrays : ");
+        
         for(int i=0; i<size; i++) {
         	
         	for(int j=0; j<size; j++) {
         		
         		if (firstArray[i] == secondArray[j]) {
-        			System.out.println(firstArray[i]);
+        			System.out.print(firstArray[i] + " ");
         		}
         	}
         }

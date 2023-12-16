@@ -28,7 +28,5 @@ public class Palindrome {
         	
         	System.out.println(number + " is not a palindrome number ");
         }
-
 	}
-
 }
