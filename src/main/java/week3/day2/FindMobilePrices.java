@@ -23,11 +23,13 @@ public class FindMobilePrices {
 		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Oneplus Mobiles",Keys.ENTER);
 		
         List<WebElement> priceElements = driver.findElements(By.xpath("//span[@class='a-price-whole']"));
-        List<String> priceList = new ArrayList<String>();
+        List<Integer> priceList = new ArrayList<Integer>();
                
         for (WebElement priceElement : priceElements) {
             String price = priceElement.getText();
-            priceList.add(price);
+            String modPrice = price.replaceAll(",", "");
+            Integer mobilePrice = Integer.parseInt(modPrice);
+            priceList.add(mobilePrice);
         }
         Collections.sort(priceList);
         System.out.print("Lowest price of OnePlus Mobiles : ");
